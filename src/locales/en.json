@@ -1,0 +1,296 @@
+{
+  "Meta": {
+    "title": "Detox",
+    "description": "Best finance for your business."
+  },
+  "Components": {
+    "FormLogin": {
+      "title": "Login",
+      "description": "Enter your email and password below to login to your account",
+      "label-email": "Email",
+      "label-password": "Password",
+      "submit-button": "Login",
+      "toast-error": "Invalid email or password. Please try again.",
+      "toast-success": "You have successfully logged in. Welcome back!"
+    },
+    "FormUser": {
+      "toast-success": "You have successfully created a new user.",
+      "toast-error": "There was an error creating the user. Please try again."
+    },
+    "ModeToggle": {
+      "sr-label": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "Breadcrumb": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "settings": "Settings",
+      "cms": "Content",
+      "blog": "Blog",
+      "hero": "Hero",
+      "about-us": "About us",
+      "why-us": "Why us",
+      "cta": "Call to action",
+      "our-services": "Our services",
+      "plans": "Plans",
+      "calculator": "Calculator",
+      "our-team": "Our team",
+      "our-partners": "Our partners",
+      "faq": "FAQ",
+      "contacts-socials": "Contacts & Socials",
+      "meta": "Metadata",
+      "go-index-page": "Go to home page",
+      "security": "Security",
+      "advanced": "Advanced",
+      "new": "New",
+      "home": "Home",
+      "requests": "Applications"
+    },
+    "SidebarAdmin": {
+      "company-name": "Detox",
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "settings": "Settings",
+      "cms": "Content",
+      "blog": "Blog",
+      "requests": "Applications"
+    },
+    "Button": {
+      "logout": "Logout",
+      "learn-more": "Learn more",
+      "close": "Close",
+      "choose-plan": "Choose plan",
+      "add-new": "Add New",
+      "read-more": "Read more",
+      "service-calculator": "Service Calculator"
+    },
+    "FormSection": {
+      "heading-label": "Heading",
+      "heading-placeholder": "Enter heading text",
+      "current-value": "Current value",
+      "subheading-label": "Subheading",
+      "subheading-placeholder": "Enter subheading text",
+      "primary-button-label": "Primary button",
+      "primary-button-placeholder": "Enter primary button text",
+      "form-save": "Save",
+      "secondary-button-label": "Secondary button",
+      "secondary-button-placeholder": "Enter secondary button text",
+      "update-success": "Section successfully updated",
+      "update-error": "Section update failed. Please try again.",
+      "section-name-label": "Section name",
+      "section-name-placeholder": "Enter section name",
+      "card-title": "Card {number} - Title",
+      "card-title-placeholder": "Enter card title",
+      "card-description-label": "Card {number} - Description",
+      "card-bullets-label": "List",
+      "card-bullets-placeholder": "Enter list item",
+      "card-bullets-add-bullet": "Add list item",
+      "card-extra-label": "Card {number} - Additional field",
+      "card-description-placeholder": "Enter card description",
+      "card-extra-placeholder": "Enter additional field",
+      "button-add-new": "Add New",
+      "image-label": "Image"
+    },
+    "PlanCard": {
+      "card-title": "Plan"
+    },
+    "FormArticle": {
+      "form-title-create": "Create New Article",
+      "form-title-update": "Update New Article",
+      "form-description-create": "Please fill out the form below to create a new article. Make sure you enter all the required information, including the title, content, main image, and status of the article. You can save the article as a draft for further editing or publish it immediately.",
+      "form-description-update": "Please fill out the form below to update a new article. Make sure you enter all the required information, including the title, content, main image, and status of the article. You can save the article as a draft for further editing or publish it immediately.",
+      "button-add-social": "Add Social",
+      "button-save-post": "Save",
+      "label-blog-title": "Blog title  ({locale})",
+      "placeholder-blog-title": "Enter blog title",
+      "label-blog-content": "Blog content  ({locale})",
+      "placeholder-blog-content": "Enter blog content",
+      "label-link-title": "Link title ({locale})",
+      "placeholder-link-title": "Enter link title",
+      "label-link-href": "Link",
+      "placeholder-link-href": "Enter link",
+      "label-select-status": "Status",
+      "status-draft": "Draft",
+      "status-published": "Publish",
+      "status-archived": "Archive",
+      "label-blog-image": "Blog image",
+      "button-cancel": "Cancel",
+      "column-title": "Title",
+      "column-date": "Date",
+      "column-status": "Status",
+      "column-actions": "Actions"
+    },
+    "FormOptions": {
+      "placeholder-type": "Option",
+      "button-save": "Save"
+    },
+    "FormServiceCost": {
+      "button-save": "Save",
+      "button-add-new": "Add new",
+      "form-of-ownership": "Form of Ownership",
+      "field-of-activity": "Field of activity",
+      "tax-system": "Tax system",
+      "employee-range": "Employee range",
+      "time-period": "Time period",
+      "total-amount": "Total amount",
+      "total-amount-after-discount": "Amount after discount",
+      "actions": "Actions",
+      "table-caption": "List of costs for services.",
+      "select-placeholder": "Select an option",
+      "calculator-helper-text": "Select the options that suit your business and we will calculate the cost",
+      "button-get-offer": "Get an offer",
+      "placeholder-form-of-ownership": "Select form of ownership",
+      "placeholder-field-of-activity": "Select field of activity",
+      "placeholder-tax-system": "Select tax system",
+      "placeholder-employee-range": "Select employee range",
+      "placeholder-time-period": "Select time period",
+      "cost-of-accounting-services": "Cost of accounting services for",
+      "currency": "som",
+      "price-without-discount": "som per month without discount"
+    },
+    "NavigationLinks": {
+      "services": "Services",
+      "plans": "Plans",
+      "blog": "Blog",
+      "team": "Team",
+      "contacts": "Contacts"
+    },
+    "Footer": {
+      "our-contacts": "Our contacts",
+      "our-socials": "Our socials"
+    },
+    "FormRequest": {
+      "get-an-offer": "Get an offer",
+      "name-label": "Your name",
+      "name-placeholder": "Azamat Azamatovich",
+      "phone-label": "Your phone number",
+      "title": "Name",
+      "phone": "Phone",
+      "status": "Status",
+      "contents-of-the-application": "Contents of the application",
+      "date": "Date",
+      "unread": "UNREAD",
+      "read": "READ",
+      "alert-title": "Are you absolutely sure?",
+      "alert-description": "This action cannot be undone. This will permanently delete request and remove it from our servers.",
+      "button-continue": "Continue",
+      "button-cancel": "Cancel",
+      "form-title-update": "Update application request",
+      "form-description-update": "Please fill out the form below to update an application request. You can save the request as read or unread.",
+      "button-save": "Save",
+      "customer-name": "Customer Name",
+      "phone-number": "Phone number",
+      "mark-as-read": "Mark as read",
+      "mark-as-unread": "Mark as unread"
+    },
+    "FormMeta": {
+      "label-meta-title": "Meta title",
+      "placeholder-meta-title": "Meta title...",
+      "label-meta-description": "Meta description",
+      "placeholder-meta-description": "Meta description...",
+      "label-meta-keywords": "Meta keywords",
+      "placeholder-meta-keywords": "Meta keywords...",
+      "label-og-image": "OG Image",
+      "button-save": "Save",
+      "label-logo-1": "Logo 1",
+      "label-logo-2": "Logo 2"
+    }
+  },
+  "Pages": {
+    "Page404": {
+      "title": "404",
+      "description": "Sorry, the page you were looking doesn't exist.",
+      "link": "Back to homepage"
+    },
+    "Admin": {
+      "Dashboard": {
+        "heading": "Admin Panel"
+      },
+      "Users": {
+        "title": "User Management",
+        "button-add-new": "New User",
+        "search-placeholder": "Search user..."
+      },
+      "CMS": {
+        "Navigation": {
+          "hero": "Hero Section",
+          "about-us": "About Us",
+          "why-us": "Why Us",
+          "cta": "Call to Action",
+          "our-services": "Our Services",
+          "plans": "Plans",
+          "calculator": "Calculator",
+          "blog": "Blog",
+          "our-team": "Our Team",
+          "our-partners": "Our Partners",
+          "faq": "Frequently Asked Questions",
+          "contacts-socials": "Contacts & Socials",
+          "meta": "Metadata",
+          "products-showcase": "Products Showcase",
+          "our-products": "Our products",
+          "product-details": "Product Details",
+          "product-features": "Product Features",
+          "three-steps": "Three Steps"
+        },
+        "title": "Content management system",
+        "Section": {
+          "card-heading": "Section Content",
+          "card-subheading": "Enter new text and click save to overwrite."
+        },
+        "heading": "Welcome to the Content Management System",
+        "subheading": "Please select a section to start editing.",
+        "ContactsAndSocials": {
+          "heading": "Contact",
+          "subheading": "Edit the site contact and socials links"
+        },
+        "Meta": {
+          "heading": "Metadata",
+          "subheading": "Edit the site metadata"
+        }
+      },
+      "Blog": {
+        "title": "Blog Management",
+        "button-add-new": "New Article",
+        "search-placeholder": "Search article..."
+      },
+      "Settings": {
+        "title": "System settings",
+        "Navigation": {
+          "general": "General settings",
+          "security": "Security settings",
+          "advanced": "Advanced settings",
+          "calculator": "Calculator settings"
+        },
+        "general-settings-title": "General Settings",
+        "general-settings-description": "Manage the overall settings of your application. This section includes options for configuring site information and appearance."
+      },
+      "Calculator": {
+        "title": "Calculator Service Cost",
+        "description": "Manage the calculator settings of your application. This section includes cost of services for configuring calculator options.",
+        "options-management-title": "Calculator Options Management",
+        "options-management-description": "Manage the calculator settings of your application. This section includes options for configuring calculator options."
+      },
+      "Request": {
+        "title": "Client Applications",
+        "search-placeholder": "Search application...",
+        "button-add-new": "Add Application"
+      }
+    },
+    "Blog": {
+      "other-articles": "Other articles"
+    }
+  },
+  "Server": {
+    "actions": {
+      "success-create": "Successfully created!",
+      "success-update": "Successfully updated!",
+      "success-delete": "Successfully deleted!",
+      "error": "Oops! Something went wrong.",
+      "request-submit-success": "Your application has been successfully delivered!",
+      "request-submit-error": "There was an error submitting your application. Please try again.",
+      "item-not-found": "Item not found"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+model Section {
+  uid            Int          @id @default(autoincrement())
+  slug    String
+  sectionName_ru  String?
+  sectionName_en  String?
+  heading_ru          String?
+  heading_en          String?
+  subheading_ru    String?
+  subheading_en    String?
+  primaryButton_ru  String?
+  primaryButton_en  String?
+  secondaryButton_ru String?
+  secondaryButton_en String?
+  image   String?
+  cards        Card[]
+
+  @@unique([slug])
+  @@map("sections")
+}
+
+model Card {
+  uid            Int          @id @default(autoincrement())
+  sectionId Int
+  title_ru      String?
+  title_en      String?
+  description_ru      String?
+  description_en      String?
+  extra_ru      String?
+  extra_en      String?
+  bullets_ru      String[]
+  bullets_en      String[]
+  image   String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  section Section @relation(fields: [sectionId], references: [uid], onDelete: Cascade)
+
+  @@unique([sectionId, uid])
+  @@map("cards")
+}
+
+model Social {
+  uid            Int          @id @default(autoincrement())
+  type      String
+  name      String
+  link      String
+  icon      String?
+
+  @@map("socials")
+}
+
+model MetaData {
+  uid            Int          @id @default(autoincrement())
+  title_ru      String
+  title_en      String?
+  description_ru      String
+  description_en      String?
+  keywords_ru      String
+  keywords_en      String?
+  ogImage      String?
+  logo1      String?
+  logo2      String?
+  locations_ru      String[]
+  locations_en      String[]
+  map_coordinates      Float[]
+  
+  @@map("meta_datas")
+}
