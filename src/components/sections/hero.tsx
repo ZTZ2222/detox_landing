@@ -1,22 +1,39 @@
 import React from "react"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 import { getNormalizedSectionById } from "@/server/data-access-layer/content"
 
 export default async function Hero() {
   const sectionData = await getNormalizedSectionById("hero")
 
   return (
-    <section
-      id="hero"
-      className="relative mb-10 flex h-[calc(100vh-70px)] w-full justify-center overflow-hidden"
-    >
-      <h1 className="mt-[180px] max-w-[289px] text-center text-4xl font-semibold leading-[44px] tracking-tight lg:max-w-[814px] lg:text-[64px] lg:leading-[80px]">
-        <span className="text-blue-950">{sectionData?.heading} </span>
-        <span className="text-[#757C8A]">{sectionData?.subheading} </span>
-        <span className="text-blue-950">{sectionData?.primaryButton} </span>
-        <br className="lg:hidden" />
-        <span className="text-red-650">{sectionData?.secondaryButton} </span>
-      </h1>
+    <section id="hero" className="relative mb-20 overflow-x-hidden">
+      <div className="container relative z-10 mt-12">
+        {/* Heading */}
+        <h1 className="text-text-primary mx-4 mb-[203px] text-[32px] font-bold leading-[39px]">
+          {sectionData?.heading}
+        </h1>
+
+        {/* Subheading */}
+        <h2 className="text-text-secondary mx-4 mb-8 max-w-[280px] leading-5">
+          {sectionData?.subheading}
+        </h2>
+
+        {/* CTA Button */}
+        <Button variant="accent" size="lg">
+          {sectionData?.primaryButton}
+        </Button>
+      </div>
+      {/* Background Image */}
+      <div className="absolute left-1/2 top-0 h-[514px] w-[772px] -translate-x-[15%]">
+        <Image
+          src={sectionData?.image || "/assets/placeholder-gray.svg"}
+          alt="Hero Background Image"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </div>
     </section>
   )
 }
