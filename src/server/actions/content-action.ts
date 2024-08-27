@@ -35,7 +35,7 @@ export const updateSection = actionClient
         }
       }
 
-      revalidatePath("/admin/cms/[section]")
+      revalidatePath("/admin/cms/[section]", "page")
 
       return { success: t("Server.actions.success-update") }
     } catch (error) {
@@ -49,7 +49,7 @@ export const deleteCard = actionClient
     const t = await getTranslations()
     try {
       await db.card.delete({ where: { uid: parsedInput.uid } })
-      revalidatePath("/admin/cms/[section]")
+      revalidatePath("/admin/cms/[section]", "page")
 
       return { success: t("Server.actions.success-delete") }
     } catch (error) {

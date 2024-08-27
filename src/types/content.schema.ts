@@ -68,14 +68,14 @@ export type zSocial = z.infer<typeof socialSchema>
 export const metaUpsertSchema = z.object({
   uid: z.number().optional(),
   title_ru: z.string(),
-  title_en: z.string().nullable(),
+  title_en: z.string().nullable().optional(),
   description_ru: z.string(),
-  description_en: z.string().nullable(),
+  description_en: z.string().nullable().optional(),
   keywords_ru: z.string(),
-  keywords_en: z.string().nullable(),
-  ogImage: z.string().nullable(),
-  logo1: z.string().nullable(),
-  logo2: z.string().nullable(),
+  keywords_en: z.string().nullable().optional(),
+  ogImage: z.string().nullable().optional(),
+  logo1: z.string().nullable().optional(),
+  logo2: z.string().nullable().optional(),
 })
 
 export const metaReadSchema = metaUpsertSchema.omit({ uid: true }).extend({

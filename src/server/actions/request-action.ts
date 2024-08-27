@@ -16,7 +16,7 @@ export const createClientRequest = actionClient
     const t = await getTranslations()
     try {
       await db.clientRequest.create({ data: parsedInput })
-      revalidatePath("/admin/requests")
+      revalidatePath("/admin/requests", "page")
       revalidatePath("/[locale]/(protected)", "layout")
       return { success: t("Server.actions.request-submit-success") }
     } catch (error) {
