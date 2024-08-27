@@ -67,7 +67,7 @@ const SheetContent = React.forwardRef<
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
-      <div className="flex justify-between bg-white px-4 py-3">
+      <div className="flex justify-between border-b bg-white px-4 py-3">
         <div className="relative h-[46px] w-[92px]">
           <Image
             src={logo || "/assets/placeholder-gray.svg"}

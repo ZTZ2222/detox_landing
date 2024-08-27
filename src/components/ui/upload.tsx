@@ -39,7 +39,7 @@ export default function ImageUploadthing({ field, className }: Props) {
   return (
     <div
       className={cn(
-        "group relative grid size-32 place-content-center rounded-lg bg-gray-400",
+        "group relative grid aspect-video w-52 place-content-center rounded-lg bg-gray-400",
         className,
       )}
     >
@@ -51,12 +51,12 @@ export default function ImageUploadthing({ field, className }: Props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="group relative size-32 overflow-hidden rounded-lg bg-gray-400"
+            className="group relative aspect-video w-52 overflow-hidden rounded-lg bg-gray-400"
           >
             <Image
               src={field.value}
-              alt={`User Avatar Image`}
-              className="object-cover"
+              alt={`Field Image`}
+              className="object-contain"
               fill
               sizes="(max-width: 600px) 100vw, 50vw"
             />
