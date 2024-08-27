@@ -1,9 +1,5 @@
 import React from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 import Heading from "@/components/shared/heading"
-import Parallax from "@/components/shared/parallax"
 import Subheading from "@/components/shared/subheading"
 import { getNormalizedSectionById } from "@/server/data-access-layer/content"
 
@@ -13,22 +9,21 @@ export default async function AboutUs() {
   return (
     <section
       id="about-us"
-      className="container mb-[100px] space-y-[120px] overflow-x-clip lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0"
+      className="bg-background-accent container space-y-3 py-[68px] text-center"
     >
-      <div className="flex flex-col justify-center gap-[12px] rounded-[24px] bg-gray-25 p-6 shadow-xl">
-        <Heading>{sectionData?.heading}</Heading>
-        <Separator />
+      <div className="flex flex-col items-center justify-center gap-3">
+        <Heading className="w-[222px]">{sectionData?.sectionName}</Heading>
+        <Heading className="font-philosopher">{sectionData?.heading}</Heading>
         <Subheading>{sectionData?.subheading}</Subheading>
-        <Button
-          variant="core"
-          size="lg"
-          className="mt-[12px] self-center"
-          asChild
-        >
-          <Link href="#cta">{sectionData?.primaryButton}</Link>
-        </Button>
       </div>
-      <Parallax image={sectionData?.image} cards={sectionData?.cards} />
+      <div className="space-y-3">
+        <h3 className="text-text-primary text-2xl font-bold">
+          {sectionData?.cards[0].title}
+        </h3>
+        <p className="text-text-secondary leading-6">
+          {sectionData?.cards[0].description}
+        </p>
+      </div>
     </section>
   )
 }
