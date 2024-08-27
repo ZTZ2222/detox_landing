@@ -200,10 +200,10 @@ export default function FormCard({
         variant="destructive"
         size="icon"
         onClick={handleDelete.bind(null, card.uid, index)}
-        className="absolute right-2 top-0"
+        className="absolute -top-5 right-0 h-7 w-7"
         disabled={isDeleting}
       >
-        <XCircle className="size-7" />
+        <XCircle className="size-[22px]" />
       </Button>
     </div>
   )
