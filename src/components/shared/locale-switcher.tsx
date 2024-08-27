@@ -6,18 +6,18 @@ import { usePathname, useRouter } from "@/lib/i18n-navigation"
 import { cn } from "@/lib/utils"
 
 const TOGGLE_CLASSES =
-  "text-sm font-semibold flex items-center justify-center transition-colors relative z-10 w-[55px] h-[36px]"
+  "text-text-primary flex items-center justify-center transition-colors relative z-10 w-[55px] h-[36px]"
 
 const LocaleSwitcher = ({ className }: { className?: string }) => {
   const router = useRouter()
   const pathname = usePathname()
   const locale = useLocale()
   return (
-    <div className="relative flex h-fit w-fit items-center rounded-[12px] bg-white p-1 lg:bg-gray-200">
+    <div className="relative flex h-fit w-fit items-center rounded-[12px] bg-white px-1 py-[9px] lg:bg-gray-200">
       <button
         className={cn(
           TOGGLE_CLASSES,
-          locale === "ru" ? "text-white" : "text-slate-800",
+          locale === "ru" && "font-bold",
           className,
         )}
         onClick={async () => {
@@ -30,7 +30,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
       <button
         className={cn(
           TOGGLE_CLASSES,
-          locale === "en" ? "text-white" : "text-slate-800",
+          locale === "en" && "font-bold",
           className,
         )}
         onClick={async () => {
@@ -48,7 +48,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 rounded-md bg-gradient-to-r from-red-650 to-gray-950"
+          className="border-background-accent h-full w-1/2 rounded-md border-2"
         />
       </div>
     </div>
