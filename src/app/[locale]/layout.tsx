@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter as FontSans } from "next/font/google"
+import { Inter as FontSans, Philosopher } from "next/font/google"
 import { notFound } from "next/navigation"
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin"
 import { NextIntlClientProvider } from "next-intl"
@@ -18,6 +18,12 @@ import type { zMetaRead } from "@/types/content.schema"
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const fontPhilosopher = Philosopher({
+  weight: "700",
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-philosopher",
 })
 
 type Props = {
@@ -61,6 +67,7 @@ export default async function LocaleLayout({
         className={cn(
           "min-h-screen scroll-smooth bg-[#F9FAFB] font-sans antialiased",
           fontSans.variable,
+          fontPhilosopher.variable,
         )}
       >
         {/* SSR Plugin for UploadThing */}
