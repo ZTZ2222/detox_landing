@@ -1,7 +1,5 @@
 import React from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
+import Image from "next/image"
 import Heading from "@/components/shared/heading"
 import Subheading from "@/components/shared/subheading"
 import { getNormalizedSectionById } from "@/server/data-access-layer/content"
@@ -10,27 +8,25 @@ export default async function WhyUs() {
   const sectionData = await getNormalizedSectionById("why-us")
 
   return (
-    <section className="container grid justify-items-center gap-8 py-12 lg:grid-cols-2 lg:gap-16">
-      <div className="grid gap-6">
-        <div className="space-y-2">
-          <Heading>{sectionData?.heading}</Heading>
-          <h4 className="font-semibold leading-6 text-red-550">
-            {sectionData?.cards[0].title}
-          </h4>
-        </div>
-        <Separator />
-        <div className="space-y-6 md:grid md:justify-items-center">
+    <section className="container relative h-[627px] px-6 pt-8">
+      <div className="relative z-10 space-y-6">
+        <Heading className="font-philosopher text-text-secondary leading-9">
+          {sectionData?.heading}
+        </Heading>
+        <div>
+          <Subheading className="font-bold leading-5">
+            {sectionData?.primaryButton}
+          </Subheading>
           <Subheading>{sectionData?.subheading}</Subheading>
-          <Button
-            variant="core"
-            size="lg"
-            className="h-11 w-full max-w-xl"
-            asChild
-          >
-            <Link href="#cta">{sectionData?.primaryButton}</Link>
-          </Button>
         </div>
       </div>
+      <Image
+        src={sectionData?.image || "/assets/placeholder-gray.svg"}
+        alt="Why Us"
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
     </section>
   )
 }
