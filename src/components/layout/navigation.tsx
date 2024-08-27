@@ -24,24 +24,24 @@ export default function Navigation({
   const t = useTranslations("Components.NavigationLinks")
   const links = [
     {
-      name: "Главная",
+      name: "Homepage",
       href: "hero",
     },
     {
-      name: "О нас",
+      name: "About company",
       href: "about-us",
     },
     {
-      name: "Инвестиции",
-      href: "investment",
+      name: "Traffic Juice",
+      href: "traffic-juice",
     },
     {
-      name: "Что мы предлагаем",
-      href: "our-services",
+      name: "3 Steps",
+      href: "three-steps",
     },
     {
-      name: t("contacts"),
-      href: "contact",
+      name: "Q&A",
+      href: "faq",
     },
   ]
   return (
@@ -58,7 +58,7 @@ export default function Navigation({
           </Button>
         </SheetTrigger>
         <SheetContent
-          className="w-full bg-white/70 p-0 backdrop-blur-md xl:hidden"
+          className="w-full bg-white p-0 backdrop-blur-md xl:hidden"
           logo={logo}
         >
           {/* SR ONLY */}

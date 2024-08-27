@@ -12,12 +12,12 @@ export default function Header({ logo }: { logo: string | null | undefined }) {
       )}
     >
       <div className="container flex items-center justify-between lg:gap-10">
-        <Link href="/" className="relative h-[46px] w-[92px]">
+        <Link href="/" className="relative h-[32px] w-[158px]">
           <Image
             src={logo || "/assets/placeholder-gray.svg"}
             alt="Detox Logo"
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </Link>
