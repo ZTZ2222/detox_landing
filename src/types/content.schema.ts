@@ -76,6 +76,9 @@ export const metaUpsertSchema = z.object({
   ogImage: z.string().nullable().optional(),
   logo1: z.string().nullable().optional(),
   logo2: z.string().nullable().optional(),
+  locations_ru: z.string().array(),
+  locations_en: z.string().array(),
+  map_coordinates: z.coerce.number().array(),
 })
 
 export const metaReadSchema = metaUpsertSchema.omit({ uid: true }).extend({
