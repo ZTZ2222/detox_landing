@@ -33,7 +33,7 @@ export default function Navigation({
     },
     {
       name: "Traffic Juice",
-      href: "traffic-juice",
+      href: "products-showcase",
     },
     {
       name: "3 Steps",
@@ -66,19 +66,17 @@ export default function Navigation({
             <SheetTitle>Меню навигации</SheetTitle>
             <SheetDescription>Открыть меню навигации</SheetDescription>
           </SheetHeader>
-          <div className="mt-[65px] flex h-[75%] flex-col justify-between">
+          <div className="mx-[35px] mt-[65px] flex h-[75%] flex-col justify-between">
             {/* Links */}
-            <nav className="flex flex-col items-center">
+            <nav className="flex flex-col items-center gap-12 text-center">
               {links.map(link => (
                 <ScrollLink key={link.name} href={link.href}>
-                  <SheetClose className="px-[30px] py-4">
-                    {link.name}
-                  </SheetClose>
+                  <SheetClose>{link.name}</SheetClose>
                 </ScrollLink>
               ))}
             </nav>
             <SheetFooter className="flex w-full justify-center">
-              <LocaleSwitcher className="h-[36px] w-[175px]" />
+              <LocaleSwitcher className="h-[42px] w-[148.5px]" />
             </SheetFooter>
           </div>
         </SheetContent>
