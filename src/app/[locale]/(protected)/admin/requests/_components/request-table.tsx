@@ -22,8 +22,8 @@ export default async function RequestTable({ query, currentPage }: Props) {
   const locale = await getLocale()
   const t = await getTranslations()
   const columns = [
-    t("Components.FormRequest.title"),
-    t("Components.FormRequest.last-name"),
+    t("Components.FormRequest.full-name"),
+    t("Components.FormRequest.phone"),
     t("Components.FormRequest.column-email"),
     t("Components.FormRequest.contents-of-the-application"),
     t("Components.FormRequest.date"),
@@ -47,10 +47,10 @@ export default async function RequestTable({ query, currentPage }: Props) {
           <TableRow key={request.uid}>
             <TableCell>
               <Link href={`/admin/requests/${request.uid}`}>
-                {request.firstName}
+                {request.fullName}
               </Link>
             </TableCell>
-            <TableCell>{request.lastName}</TableCell>
+            <TableCell>{request.phone}</TableCell>
             <TableCell>{request.email}</TableCell>
             <TableCell>{request.message}</TableCell>
             <TableCell>

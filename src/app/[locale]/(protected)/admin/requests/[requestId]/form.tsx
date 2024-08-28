@@ -7,7 +7,6 @@ import { useLocale, useTranslations } from "next-intl"
 import { useAction } from "next-safe-action/hooks"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
-import { AppConfig } from "@/lib/i18n"
 import { useRouter } from "@/lib/i18n-navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -19,7 +18,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
 import {
   Form,
   FormControl,
@@ -35,7 +33,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { updateClientRequest } from "@/server/actions/request-action"
 import {
@@ -118,10 +115,10 @@ export default function UpdateRequestForm({ request, className }: Props) {
                 </FormItem>
               )}
             />
-            {/* First Name */}
+            {/* Full Name */}
             <FormField
               control={form.control}
-              name="firstName"
+              name="fullName"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t("customer-name")}</FormLabel>
@@ -132,16 +129,16 @@ export default function UpdateRequestForm({ request, className }: Props) {
               )}
             />
 
-            {/* Имя */}
+            {/* Phone */}
             <FormField
               control={form.control}
-              name="lastName"
+              name="phone"
               render={({ field }) => (
                 <FormItem className="xl:col-span-2">
-                  <FormLabel>{t("customer-last-name")}</FormLabel>
+                  <FormLabel>{t("phone")}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Азаматов"
+                      placeholder={t("placeholder-phone")}
                       {...field}
                       value={(field.value as string) || ""}
                     />
@@ -175,28 +172,11 @@ export default function UpdateRequestForm({ request, className }: Props) {
                   </FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Сообщение..."
+                      placeholder={t("placeholder-message")}
                       className="resize-none"
                       {...field}
                     />
                   </FormControl>
-                </FormItem>
-              )}
-            />
-
-            {/* Privacy Policy */}
-            <FormField
-              control={form.control}
-              name="accepted_privacy_policy"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-center gap-3 space-y-0 p-1">
-                  <FormControl>
-                    <Checkbox
-                      checked={field.value}
-                      // onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <FormLabel>{t("label-privacy")}</FormLabel>
                 </FormItem>
               )}
             />
