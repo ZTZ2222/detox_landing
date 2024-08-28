@@ -9,7 +9,10 @@ export default async function ProductsShowcase() {
   const sectionData = await getNormalizedSectionById("products-showcase")
 
   return (
-    <section className="container grid justify-items-center gap-32 py-16">
+    <section
+      id="products-showcase"
+      className="container grid justify-items-center gap-32 py-16"
+    >
       <div className="space-y-3">
         <Heading className="text-2xl leading-6">{sectionData?.heading}</Heading>
         <Subheading>{sectionData?.subheading}</Subheading>
