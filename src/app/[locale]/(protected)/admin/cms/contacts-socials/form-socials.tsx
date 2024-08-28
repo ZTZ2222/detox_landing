@@ -119,7 +119,7 @@ export default function SocialsForm({ socialsData, className }: Props) {
                   variant="destructive"
                   size="icon"
                   onClick={handleDelete.bind(null, social.uid, index)}
-                  className="absolute right-2 top-2"
+                  className="absolute right-1 top-1 size-8"
                   disabled={isDeleting}
                 >
                   <Trash2 className="size-5" />
