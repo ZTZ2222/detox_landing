@@ -35,7 +35,9 @@ export default function ScrollLink({
       href={`#${href}`}
       onClick={handleClick}
       className={cn(
-        "w-fit text-xl font-semibold leading-6 text-blue-950 xl:text-base",
+        "text-text-primary w-full p-3 text-base font-semibold leading-6",
+        pathname === `/#${href}` && "font-bold",
+        "hover:underline hover:underline-offset-4",
         className,
       )}
     >

@@ -13,7 +13,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
   const pathname = usePathname()
   const locale = useLocale()
   return (
-    <div className="relative flex h-fit w-fit items-center rounded-[12px] bg-white px-1 py-[9px] lg:bg-gray-200">
+    <div className="relative flex h-fit w-fit shrink-0 items-center gap-2 rounded-[12px] px-1 py-[9px]">
       <button
         className={cn(
           TOGGLE_CLASSES,
@@ -27,6 +27,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
       >
         <span className="relative z-10">РУ</span>
       </button>
+      <p className="text-text-secondary font-semibold leading-6">/</p>
       <button
         className={cn(
           TOGGLE_CLASSES,
@@ -48,7 +49,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="border-background-accent h-full w-1/2 rounded-md border-2"
+          className="border-background-accent h-full w-[46%] rounded-md border-2"
         />
       </div>
     </div>

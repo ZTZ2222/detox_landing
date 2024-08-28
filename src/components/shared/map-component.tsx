@@ -17,7 +17,7 @@ export default function MapComponent({ latitude, longitude }: Props) {
     <MapContainer
       center={[lat, lng]}
       zoom={16}
-      style={{ height: "450px", width: "100%" }}
+      style={{ height: "215px", width: "100%" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
