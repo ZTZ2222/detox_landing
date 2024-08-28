@@ -163,9 +163,9 @@
     },
     "FormRequest": {
       "get-an-offer": "Получить предложение",
-      "name-label": "Имя",
-      "phone-label": "Фамилия",
-      "name-placeholder": "Азамат",
+      "name-label": "Ваше имя",
+      "phone-label": "Ваш номер телефона",
+      "name-placeholder": "Введите имя",
       "title": "Имя",
       "phone": "Телефон",
       "status": "Статус",
@@ -191,7 +191,12 @@
       "column-email": "Электронная почта",
       "customer-last-name": "Фамилия клиента",
       "label-message": "Сообщение",
-      "label-privacy": "Согласие на обработку персональных данных"
+      "label-privacy": "Согласие на обработку персональных данных",
+      "placeholder-name": "Ваше полное имя",
+      "placeholder-phone": "Номер телефона",
+      "placeholder-message": "Ваш комментарий",
+      "placeholder-email": "Электронная почта",
+      "full-name": "Полное имя"
     },
     "FormMeta": {
       "label-meta-title": "Мета-заголовок",
@@ -203,7 +208,14 @@
       "label-og-image": "OG Изображение",
       "button-save": "Сохранить",
       "label-logo-1": "Логотип 1",
-      "label-logo-2": "Логотип 2"
+      "label-logo-2": "Логотип 2",
+      "placeholder-locations": "Введите местоположение",
+      "label-locations": "Локации",
+      "button-add-location": "Добавить местоположение",
+      "label-map-coordinates": "Координаты карты",
+      "placeholder-coordinates": "Введите координаты",
+      "latitude": "Широта",
+      "longitude": "Долгота"
     },
     "Uploadthing": {
       "toast-upload-success": "Картинка успешно загружена!"
@@ -249,7 +261,8 @@
           "three-steps": "Три шага",
           "product-features": "Особенности продукта",
           "product-details": "Информация о продуктах",
-          "our-products": "Наши продукты"
+          "our-products": "Наши продукты",
+          "navigation": "Навигация"
         },
         "title": "Система управления контентом",
         "Section": {

@@ -164,7 +164,7 @@
     "FormRequest": {
       "get-an-offer": "Get an offer",
       "name-label": "Your name",
-      "name-placeholder": "Azamat Azamatovich",
+      "name-placeholder": "Enter name",
       "phone-label": "Your phone number",
       "title": "Name",
       "phone": "Phone",
@@ -183,7 +183,16 @@
       "customer-name": "Customer Name",
       "phone-number": "Phone number",
       "mark-as-read": "Mark as read",
-      "mark-as-unread": "Mark as unread"
+      "mark-as-unread": "Mark as unread",
+      "placeholder-name": "Your Full Name",
+      "label-email": "Email",
+      "placeholder-phone": "Phone Number",
+      "placeholder-message": "Your Comment",
+      "placeholder-email": "Email",
+      "button-send-request": "Send Request",
+      "full-name": "Full name",
+      "column-email": "Email",
+      "label-message": "Message"
     },
     "FormMeta": {
       "label-meta-title": "Meta title",
@@ -195,7 +204,17 @@
       "label-og-image": "OG Image",
       "button-save": "Save",
       "label-logo-1": "Logo 1",
-      "label-logo-2": "Logo 2"
+      "label-logo-2": "Logo 2",
+      "placeholder-locations": "Enter location",
+      "label-locations": "Locations",
+      "button-add-location": "Add location",
+      "label-map-coordinates": "Map Coordinates",
+      "placeholder-coordinates": "Enter coordinate",
+      "latitude": "Latitude",
+      "longitude": "Longitude"
+    },
+    "Uploadthing": {
+      "toast-upload-success": "Image successfully uploaded!"
     }
   },
   "Pages": {
@@ -231,7 +250,9 @@
           "our-products": "Our products",
           "product-details": "Product Details",
           "product-features": "Product Features",
-          "three-steps": "Three Steps"
+          "three-steps": "Three Steps",
+          "navigation": "Navigation",
+          "socials": "Социальные сети"
         },
         "title": "Content management system",
         "Section": {
