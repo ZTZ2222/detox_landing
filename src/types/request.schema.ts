@@ -1,13 +1,10 @@
 import { z } from "zod"
 
 export const clientRequestCreateSchema = z.object({
-  firstName: z.string().min(3),
-  lastName: z.string().min(3),
+  fullName: z.string().min(3),
+  phone: z.string(),
   email: z.string().email({ message: "Некорректная почта" }),
   message: z.string().min(3),
-  accepted_privacy_policy: z.boolean().refine(value => value === true, {
-    message: "Вы должны согласиться с политикой конфиденциальности",
-  }),
 })
 
 export const clientRequestUpdateSchema = clientRequestCreateSchema.extend({
