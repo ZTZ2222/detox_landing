@@ -22,13 +22,13 @@ export default async function RequestList({ searchParams }: Props) {
     where: {
       OR: [
         {
-          firstName: {
+          fullName: {
             contains: query,
             mode: "insensitive",
           },
         },
         {
-          lastName: {
+          phone: {
             contains: query,
             mode: "insensitive",
           },
