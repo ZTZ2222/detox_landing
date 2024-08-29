@@ -159,11 +159,16 @@
       "homepage": "Homepage",
       "about-company": "About company",
       "traffic-juice": "Traffic Juice",
-      "3-steps": "3 Steps"
+      "3-steps": "3 Steps",
+      "we-are-top-partners": "We are Top Partners",
+      "products-showcase": "Juice for nutrition & health control",
+      "our-mission": "Our Mission",
+      "49-ingredients": "A total of 49 ingredients"
     },
     "Footer": {
       "our-contacts": "Our contacts",
-      "our-socials": "Our socials"
+      "our-socials": "Our socials",
+      "maps-location": "Our Branches"
     },
     "FormRequest": {
       "get-an-offer": "Get an offer",

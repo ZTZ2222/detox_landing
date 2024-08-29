@@ -156,14 +156,19 @@
       "blog": "Блог",
       "team": "Команда",
       "contacts": "Наши контакты",
-      "homepage": "Домашняя страница",
+      "homepage": "Главная",
       "about-company": "О компании",
-      "traffic-juice": "Дорожный сок",
-      "3-steps": "3 шага"
+      "traffic-juice": "Трафик Джус",
+      "3-steps": "3 шага",
+      "products-showcase": "Сок для питания и контроля здоровья",
+      "we-are-top-partners": "Мы лучшие партнеры",
+      "our-mission": "Наша миссия",
+      "49-ingredients": "Всего 49 ингредиентов."
     },
     "Footer": {
       "our-contacts": "Наши контакты",
-      "our-socials": "Мы в соцсетях"
+      "our-socials": "Мы в соцсетях",
+      "maps-location": "Наши филиалы"
     },
     "FormRequest": {
       "get-an-offer": "Получить предложение",
