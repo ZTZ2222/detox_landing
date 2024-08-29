@@ -8,7 +8,7 @@ export default async function WhyUs() {
   const sectionData = await getNormalizedSectionById("why-us")
 
   return (
-    <section className="relative min-h-[627px] px-6 pt-8 lg:min-h-screen xl:min-h-[1050px]">
+    <section className="relative min-h-[740px] px-6 pt-8 lg:min-h-screen xl:min-h-[1050px]">
       <div className="container relative z-10 grid gap-y-6 lg:grid-cols-5 lg:gap-x-20">
         <Heading className="font-philosopher leading-9 text-text-secondary lg:col-span-3">
           {sectionData?.heading}
@@ -25,7 +25,7 @@ export default async function WhyUs() {
         alt="Why Us"
         fill
         className="object-cover"
-        sizes="(min-width: 1024px) 100vw, 50vw"
+        sizes="100vw"
       />
     </section>
   )

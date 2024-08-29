@@ -31,7 +31,7 @@ export default async function Hero() {
           alt="Hero Background Image"
           fill
           className="object-cover"
-          sizes="(min-width: 1024px) 100vw, 50vw"
+          sizes="100vw"
           priority
         />
       </div>
