@@ -8,12 +8,12 @@ export default async function WhyUs() {
   const sectionData = await getNormalizedSectionById("why-us")
 
   return (
-    <section className="container relative h-[627px] px-6 pt-8">
-      <div className="relative z-10 space-y-6">
-        <Heading className="font-philosopher leading-9 text-text-secondary">
+    <section className="relative h-[627px] px-6 pt-8 lg:h-screen xl:h-[1050px]">
+      <div className="container relative z-10 grid gap-y-6 lg:grid-cols-5 lg:gap-x-20">
+        <Heading className="font-philosopher leading-9 text-text-secondary lg:col-span-3">
           {sectionData?.heading}
         </Heading>
-        <div>
+        <div className="lg:col-span-2">
           <Subheading className="font-bold leading-5">
             {sectionData?.primaryButton}
           </Subheading>
