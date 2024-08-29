@@ -12,7 +12,9 @@ export default async function PublicLayout({
   return (
     <div className="flex flex-col">
       <Header logo={logo} />
-      <main className="bg-background-primary">{children}</main>
+      <main className="mt-[65px] bg-background-primary lg:mt-0">
+        {children}
+      </main>
       <Footer />
     </div>
   )

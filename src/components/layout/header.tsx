@@ -8,7 +8,8 @@ export default function Header({ logo }: { logo: string | null | undefined }) {
     <header
       className={cn(
         "border-b py-3",
-        "z-50 w-screen lg:fixed lg:top-0 lg:bg-white/70 lg:backdrop-blur-md",
+        "fixed top-0 z-50 w-screen bg-white lg:top-4 lg:bg-white/70 lg:backdrop-blur-md",
+        "lg:container lg:left-1/2 lg:-translate-x-1/2 lg:rounded-3xl",
       )}
     >
       <div className="container flex items-center justify-between lg:gap-10">
