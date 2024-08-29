@@ -18,12 +18,12 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
-import { deleteArticle } from "@/server/actions/article-action"
+import { deleteUser } from "@/server/actions/user-action"
 
 export default function ActionButtonGroup({ userId }: { userId: string }) {
   const t = useTranslations()
 
-  const { execute, isExecuting } = useAction(deleteArticle, {
+  const { execute, isExecuting } = useAction(deleteUser, {
     onSuccess: ({ data }) => {
       if (data?.error) {
         toast.error(data.error)
@@ -35,7 +35,7 @@ export default function ActionButtonGroup({ userId }: { userId: string }) {
   })
   function handleDelete() {
     toast.success("User deleted")
-    // execute({ uid: 1 })
+    execute({ id: userId })
   }
   return (
     <div className="flex items-center gap-2">

@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { db } from "@/server"
+import ActionButtonGroup from "./action-button-group"
 
 type Props = {
   query?: string
@@ -25,8 +26,6 @@ export default async function UserTable({ query, currentPage }: Props) {
     "Role",
     "Actions",
   ]
-
-  // await sleepTimeout(3000)
 
   const users = await db.user.findMany({
     where: {
@@ -80,14 +79,7 @@ export default async function UserTable({ query, currentPage }: Props) {
               </Badge>
             </TableCell>
             <TableCell>
-              <div className="flex items-center gap-2">
-                <Button variant="ghost" size="icon">
-                  <FilePenIcon className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="icon">
-                  <TrashIcon className="h-4 w-4" />
-                </Button>
-              </div>
+              <ActionButtonGroup userId={user.id} />
             </TableCell>
           </TableRow>
         ))}
