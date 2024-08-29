@@ -12,13 +12,13 @@ export async function getClientRequests(
         ...(query && {
           OR: [
             {
-              firstName: {
+              fullName: {
                 contains: query,
                 mode: "insensitive",
               },
             },
             {
-              lastName: {
+              phone: {
                 contains: query,
                 mode: "insensitive",
               },
