@@ -155,7 +155,11 @@
       "plans": "Plans",
       "blog": "Blog",
       "team": "Team",
-      "contacts": "Contacts"
+      "contacts": "Contacts",
+      "homepage": "Homepage",
+      "about-company": "About company",
+      "traffic-juice": "Traffic Juice",
+      "3-steps": "3 Steps"
     },
     "Footer": {
       "our-contacts": "Our contacts",

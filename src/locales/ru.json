@@ -155,7 +155,11 @@
       "plans": "Тарифы",
       "blog": "Блог",
       "team": "Команда",
-      "contacts": "Наши контакты"
+      "contacts": "Наши контакты",
+      "homepage": "Домашняя страница",
+      "about-company": "О компании",
+      "traffic-juice": "Дорожный сок",
+      "3-steps": "3 шага"
     },
     "Footer": {
       "our-contacts": "Наши контакты",

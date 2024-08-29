@@ -27,7 +27,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
       >
         <span className="relative z-10">РУ</span>
       </button>
-      <p className="text-text-secondary font-semibold leading-6">/</p>
+      <p className="font-semibold leading-6 text-text-secondary">/</p>
       <button
         className={cn(
           TOGGLE_CLASSES,
@@ -49,7 +49,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="border-background-accent h-full w-[46%] rounded-md border-2"
+          className="h-full w-[46%] rounded-md border-2 border-background-accent lg:w-[40%]"
         />
       </div>
     </div>
