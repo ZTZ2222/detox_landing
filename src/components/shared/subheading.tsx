@@ -8,6 +8,13 @@ type Props = {
 
 export default function Subheading({ className, children }: Props) {
   return (
-    <p className={cn("text-text-secondary leading-5", className)}>{children}</p>
+    <p
+      className={cn(
+        "leading-5 text-text-secondary lg:text-lg lg:leading-5 xl:text-xl xl:leading-6",
+        className,
+      )}
+    >
+      {children}
+    </p>
   )
 }
