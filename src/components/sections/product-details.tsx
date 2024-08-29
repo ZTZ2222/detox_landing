@@ -8,24 +8,24 @@ export default async function ProductDetails() {
   return (
     <section className="container relative grid h-screen items-center justify-items-center">
       <div className="relative z-10 grid max-w-lg justify-items-center gap-5 rounded-3xl bg-white/60 px-6 py-8 text-center backdrop-blur-md">
-        <h4 className="border-text-secondary text-text-primary w-full rounded-md border p-3 text-center font-bold leading-5">
+        <h4 className="w-full rounded-md border border-text-secondary p-3 text-center font-bold leading-5 text-text-primary">
           {sectionData?.cards[0].title}
         </h4>
-        <span className="text-text-primary text-5xl font-medium">+</span>
-        <h4 className="border-text-secondary text-text-primary w-full rounded-md border p-3 text-center font-bold leading-5">
+        <span className="text-5xl font-medium text-text-primary">+</span>
+        <h4 className="w-full rounded-md border border-text-secondary p-3 text-center font-bold leading-5 text-text-primary">
           {sectionData?.cards[1].title}
         </h4>
-        <h4 className="border-text-secondary text-text-primary w-full rounded-md border p-3 text-center font-bold leading-5">
+        <h4 className="w-full rounded-md border border-text-secondary p-3 text-center font-bold leading-5 text-text-primary">
           {sectionData?.cards[2].title}
         </h4>
-        <p className="text-text-secondary font-semibold leading-5">
+        <p className="font-semibold leading-5 text-text-secondary">
           {sectionData?.sectionName}
         </p>
         <Separator className="bg-text-primary" />
-        <h3 className="text-text-secondary font-bold leading-5">
+        <h3 className="font-bold leading-5 text-text-secondary">
           {sectionData?.heading}
         </h3>
-        <p className="text-text-secondary leading-5">
+        <p className="leading-5 text-text-secondary">
           {sectionData?.subheading}
         </p>
       </div>
@@ -36,7 +36,7 @@ export default async function ProductDetails() {
         alt="Product Details Background Image"
         fill
         className="object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(min-width: 1024px) 100vw, 50vw"
       />
     </section>
   )

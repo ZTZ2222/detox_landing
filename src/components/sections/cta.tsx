@@ -29,7 +29,7 @@ export default async function CTA() {
           alt="CTA Background Image"
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(min-width: 1024px) 100vw, 50vw"
         />
       </div>
     </div>

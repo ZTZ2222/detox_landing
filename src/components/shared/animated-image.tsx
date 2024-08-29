@@ -32,7 +32,7 @@ export default function AnimatedImage({
         alt="Company Image"
         fill
         className="object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(min-width: 1024px) 100vw, 50vw"
       />
       <motion.div
         initial={{ y: "100%" }}

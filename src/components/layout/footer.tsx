@@ -63,7 +63,7 @@ export default async function Footer() {
     ssr: false,
   })
   return (
-    <footer className="border-t border-red-550 py-12">
+    <footer className="border-red-550 border-t py-12">
       <div className="container flex flex-col gap-8 lg:flex-row lg:justify-between">
         <div className="space-y-8">
           {/* Logo */}
@@ -73,7 +73,7 @@ export default async function Footer() {
               alt="Detox Logo"
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(min-width: 1024px) 100vw, 50vw"
             />
           </div>
 
@@ -89,7 +89,7 @@ export default async function Footer() {
               >
                 <ScrollLink
                   href={link.href}
-                  className="text-text-primary p-0 text-base font-bold"
+                  className="p-0 text-base font-bold text-text-primary"
                 >
                   {link.name}
                 </ScrollLink>
@@ -98,7 +98,7 @@ export default async function Footer() {
                     <ScrollLink
                       key={index}
                       href={child.href}
-                      className="text-text-secondary p-0 text-sm font-medium"
+                      className="p-0 text-sm font-medium text-text-secondary"
                     >
                       {child.name}
                     </ScrollLink>
@@ -112,7 +112,7 @@ export default async function Footer() {
         {/* Map */}
         <div className="space-y-3">
           <h2>Maps Location</h2>
-          <div className="text-text-secondary space-y-1.5 text-sm leading-[17px]">
+          <div className="space-y-1.5 text-sm leading-[17px] text-text-secondary">
             {meta?.locations_en.map((location, index) => (
               <p key={index}>{location}</p>
             ))}
@@ -135,7 +135,7 @@ export default async function Footer() {
                   alt={social.name || `social ${index}`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(min-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </Link>

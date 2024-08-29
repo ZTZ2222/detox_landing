@@ -23,12 +23,12 @@ export default async function OurProducts() {
             alt="Product Image 1"
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(min-width: 1024px) 100vw, 50vw"
           />
         </div>
         {/* Product Card */}
         <div className="w-full max-w-md space-y-3 rounded-3xl bg-white/40 p-4">
-          <h3 className="text-text-secondary text-lg font-semibold leading-6">
+          <h3 className="text-lg font-semibold leading-6 text-text-secondary">
             {product1?.title}
           </h3>
           <p className="text-2xl font-extrabold text-[#B11515]">
@@ -47,12 +47,12 @@ export default async function OurProducts() {
             alt="Product Image 1"
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(min-width: 1024px) 100vw, 50vw"
           />
         </div>
         {/* Product Card */}
         <div className="w-full max-w-md space-y-3 rounded-3xl bg-white/40 p-4">
-          <h3 className="text-text-secondary text-lg font-semibold leading-6">
+          <h3 className="text-lg font-semibold leading-6 text-text-secondary">
             {product2?.title}
           </h3>
           <p className="text-2xl font-extrabold text-[#B11515]">
@@ -71,12 +71,12 @@ export default async function OurProducts() {
             alt="Product Image 1"
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(min-width: 1024px) 100vw, 50vw"
           />
         </div>
         {/* Product Card */}
         <div className="w-full max-w-md space-y-3 rounded-3xl bg-white/40 p-4">
-          <h3 className="text-text-secondary text-lg font-semibold leading-6">
+          <h3 className="text-lg font-semibold leading-6 text-text-secondary">
             {product3?.title}
           </h3>
           <p className="text-2xl font-extrabold text-[#B11515]">

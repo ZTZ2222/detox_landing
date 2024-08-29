@@ -22,12 +22,12 @@ export default function ServiceCard({ card, className }: Props) {
           alt={card.title || ""}
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(min-width: 1024px) 100vw, 50vw"
         />
       </div>
 
       {/* Title */}
-      <h4 className="text-xl font-bold leading-6 text-red-550">{card.title}</h4>
+      <h4 className="text-red-550 text-xl font-bold leading-6">{card.title}</h4>
 
       {/* Bullets */}
       <ul className="grid gap-3 leading-6">

@@ -74,7 +74,7 @@ const SheetContent = React.forwardRef<
             alt="Logo"
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(min-width: 1024px) 100vw, 50vw"
           />
         </div>
         <SheetPrimitive.Close className="p-2 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary">

@@ -19,11 +19,11 @@ export default async function FAQ() {
                 alt={`Q&A icon ${index}`}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(min-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="space-y-2">
-              <h3 className="text-text-primary text-lg font-semibold leading-6">
+              <h3 className="text-lg font-semibold leading-6 text-text-primary">
                 {card.title}
               </h3>
               <p className="text-text-secondary">{card.description}</p>

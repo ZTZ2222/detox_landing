@@ -10,7 +10,7 @@ export default async function WhyUs() {
   return (
     <section className="container relative h-[627px] px-6 pt-8">
       <div className="relative z-10 space-y-6">
-        <Heading className="font-philosopher text-text-secondary leading-9">
+        <Heading className="font-philosopher leading-9 text-text-secondary">
           {sectionData?.heading}
         </Heading>
         <div>
@@ -25,7 +25,7 @@ export default async function WhyUs() {
         alt="Why Us"
         fill
         className="object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(min-width: 1024px) 100vw, 50vw"
       />
     </section>
   )

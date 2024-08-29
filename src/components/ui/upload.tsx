@@ -58,7 +58,7 @@ export default function ImageUploadthing({ field, className }: Props) {
               alt={`Field Image`}
               className="object-contain"
               fill
-              sizes="(max-width: 600px) 100vw, 50vw"
+              sizes="(min-width: 1024px) 100vw, 50vw"
             />
           </motion.div>
           <Button

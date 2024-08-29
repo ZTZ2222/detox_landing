@@ -25,7 +25,7 @@ export default async function ProductsShowcase() {
               alt={`Company Product ${index}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(min-width: 1024px) 100vw, 50vw"
             />
           </div>
         ))}

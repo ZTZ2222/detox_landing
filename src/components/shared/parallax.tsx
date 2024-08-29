@@ -61,7 +61,7 @@ export default function Parallax({ image, cards }: ParallaxProps) {
         alt="Background Image"
         fill
         className="-z-10 rounded-3xl object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(min-width: 1024px) 100vw, 50vw"
       />
     </div>
   )
