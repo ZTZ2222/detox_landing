@@ -6,7 +6,7 @@ import { getNormalizedSectionById } from "@/server/data-access-layer/content"
 export default async function ProductDetails() {
   const sectionData = await getNormalizedSectionById("product-details")
   return (
-    <section className="relative grid h-screen place-content-center lg:h-screen">
+    <section className="relative grid min-h-screen place-content-center">
       <div className="container relative z-10 grid max-w-lg justify-items-center gap-5 rounded-3xl bg-white/60 px-6 py-8 text-center backdrop-blur-md lg:max-w-4xl lg:px-36 lg:py-12 xl:max-w-5xl xl:px-[220px]">
         {/* Blocks */}
         <h4 className="w-full rounded-md border border-text-secondary p-3 text-center font-bold leading-5 text-text-primary lg:text-xl lg:leading-6">

@@ -7,10 +7,10 @@ export default async function Hero() {
   const sectionData = await getNormalizedSectionById("hero")
 
   return (
-    <section id="hero" className="relative overflow-hidden lg:h-screen">
+    <section id="hero" className="relative overflow-hidden lg:min-h-screen">
       <div className="container relative z-10 my-20 lg:mt-[258px]">
         {/* Heading */}
-        <h1 className="mx-4 mb-[180px] text-[32px] font-bold leading-[39px] text-text-primary md:mb-40 md:max-w-lg md:text-4xl lg:mb-12 lg:max-w-3xl lg:text-[64px] lg:leading-tight">
+        <h1 className="mx-4 mb-[180px] text-[32px] font-bold leading-[39px] text-text-primary md:mb-40 md:max-w-lg md:text-4xl lg:mb-12 lg:max-w-[800px] lg:text-[64px] lg:leading-tight">
           {sectionData?.heading}
         </h1>
 
