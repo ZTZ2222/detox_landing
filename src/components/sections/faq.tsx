@@ -6,8 +6,10 @@ export default async function FAQ() {
   const sectionData = await getNormalizedSectionById("faq")
   return (
     <section id="faq" className="container my-20 space-y-3">
-      <Heading className="text-2xl leading-6">{sectionData?.heading}</Heading>
-      <div className="grid gap-8">
+      <Heading className="text-2xl leading-6 lg:text-3xl lg:leading-7 xl:text-4xl xl:leading-10">
+        {sectionData?.heading}
+      </Heading>
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-x-[55px] lg:gap-y-16 xl:grid-cols-3">
         {sectionData?.cards.map((card, index) => (
           <div
             key={index}
@@ -23,7 +25,7 @@ export default async function FAQ() {
               />
             </div>
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold leading-6 text-text-primary">
+              <h3 className="text-lg font-semibold leading-6 text-text-primary lg:text-xl">
                 {card.title}
               </h3>
               <p className="text-text-secondary">{card.description}</p>
