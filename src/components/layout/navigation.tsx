@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Menu } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { cn } from "@/lib/utils"
@@ -26,28 +26,31 @@ export default function Navigation({
   const t = useTranslations("Components.NavigationLinks")
   const [activeSection, setActiveSection] = useState("")
 
-  const links = [
-    {
-      name: t("homepage"),
-      href: "hero",
-    },
-    {
-      name: t("about-company"),
-      href: "about-us",
-    },
-    {
-      name: t("traffic-juice"),
-      href: "products-showcase",
-    },
-    {
-      name: t("3-steps"),
-      href: "three-steps",
-    },
-    {
-      name: "Q&A",
-      href: "faq",
-    },
-  ]
+  const links = useMemo(
+    () => [
+      {
+        name: t("homepage"),
+        href: "hero",
+      },
+      {
+        name: t("about-company"),
+        href: "about-us",
+      },
+      {
+        name: t("traffic-juice"),
+        href: "products-showcase",
+      },
+      {
+        name: t("3-steps"),
+        href: "three-steps",
+      },
+      {
+        name: "Q&A",
+        href: "faq",
+      },
+    ],
+    [t],
+  )
 
   useEffect(() => {
     const handleScroll = () => {
