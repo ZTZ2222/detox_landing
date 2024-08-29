@@ -72,7 +72,7 @@ export default function FormRequest({
                 <FormControl>
                   <Input
                     placeholder={t("placeholder-name")}
-                    className="placeholder:text-text-secondary h-auto px-4 py-3 text-base leading-6"
+                    className="h-auto px-4 py-3 text-base leading-6 placeholder:text-text-secondary"
                     {...field}
                   />
                 </FormControl>
@@ -92,7 +92,7 @@ export default function FormRequest({
                     international
                     countryCallingCodeEditable={false}
                     placeholder={t("placeholder-phone")}
-                    className="placeholder:text-text-secondary h-auto space-x-2 rounded-md border px-4 py-3 text-base leading-6"
+                    className="h-auto space-x-2 rounded-md border px-4 py-3 text-base leading-6 placeholder:text-text-secondary"
                     {...field}
                   />
                 </FormControl>
@@ -109,7 +109,7 @@ export default function FormRequest({
                 <FormControl>
                   <Input
                     placeholder={t("placeholder-email")}
-                    className="placeholder:text-text-secondary h-auto px-4 py-3 text-base leading-6"
+                    className="h-auto px-4 py-3 text-base leading-6 placeholder:text-text-secondary"
                     {...field}
                   />
                 </FormControl>
@@ -126,7 +126,7 @@ export default function FormRequest({
                 <FormControl>
                   <Textarea
                     placeholder={t("placeholder-message")}
-                    className="placeholder:text-text-secondary resize-none text-base leading-6"
+                    className="resize-none text-base leading-6 placeholder:text-text-secondary"
                     {...field}
                   />
                 </FormControl>
@@ -135,7 +135,7 @@ export default function FormRequest({
           />
 
           {/* Privacy Policy */}
-          <p className="text-text-secondary text-sm">{privacyText}</p>
+          <p className="text-sm text-text-secondary">{privacyText}</p>
         </div>
 
         {/* Submit */}
@@ -143,7 +143,7 @@ export default function FormRequest({
           type="submit"
           variant="core"
           size="lg"
-          className="text-text-primary w-full p-3 font-semibold leading-6"
+          className="w-full p-3 font-semibold leading-6 text-text-primary lg:text-base lg:leading-6"
           disabled={isExecuting}
         >
           {btnText || t("button-send-request")}
