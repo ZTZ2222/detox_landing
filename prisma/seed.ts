@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client"
-import type { zSection, zSocial } from "@/types/content.schema"
+import type { zMetaUpsert, zSection, zSocial } from "@/types/content.schema"
 
 const prisma = new PrismaClient()
 
@@ -552,10 +552,37 @@ async function seedSocials() {
   console.log("Socials have been seeded.")
 }
 
+async function seedMetadata() {
+  const metaData: zMetaUpsert = {
+    title_ru: "Detox Title RU",
+    title_en: "Detox Title EN",
+    description_ru: "Detox Description RU",
+    description_en: "Detox Description EN",
+    keywords_ru: "Detox Keywords RU",
+    keywords_en: "Detox Keywords EN",
+    logo1: "https://utfs.io/f/2b766175-ceea-44ab-ba36-1cd9d6e35318-wam8zf.png",
+    logo2: "https://utfs.io/f/b81aa205-10b0-4696-8936-2af4404837ed-u21k3.png",
+    locations_ru: ["г.Бишкек, ТЦ Евразия 1 этаж", " г.Ош, ул.Масалиева 10"],
+    locations_en: [
+      "Bishkek, Eurasia shopping center, 1st floor",
+      "Osh, Masaliev str. 10",
+    ],
+    map_coordinates: [42.8780682, 74.5849917],
+  }
+
+  prisma.metaData.deleteMany({})
+
+  // metaData
+  await prisma.metaData.create({ data: metaData })
+
+  console.log("MetaData have been seeded.")
+}
+
 async function main() {
   await seedSections()
   await seedAdminUser()
   await seedSocials()
+  await seedMetadata()
 }
 
 main()

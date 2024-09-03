@@ -23,7 +23,7 @@ export default function LogoutButton({ className, ...props }: Props) {
       onClick={event => {
         event.preventDefault()
         signOut({
-          callbackUrl: `${window.location.origin}/login`,
+          callbackUrl: "https://toppartnersco.com/login",
         })
       }}
       {...props}
