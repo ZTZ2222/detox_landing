@@ -319,7 +319,8 @@
       "error": "Oops! Something went wrong.",
       "request-submit-success": "Your application has been successfully delivered!",
       "request-submit-error": "There was an error submitting your application. Please try again.",
-      "item-not-found": "Item not found"
+      "item-not-found": "Item not found",
+      "success-logout": "You have successfully logged out. We look forward to seeing you back!"
     }
   }
 }

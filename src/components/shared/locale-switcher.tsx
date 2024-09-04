@@ -22,7 +22,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
         )}
         onClick={async () => {
           router.push(pathname, { locale: "ru" })
-          // router.refresh()
+          router.refresh()
         }}
       >
         <span className="relative z-10">РУ</span>
@@ -36,7 +36,7 @@ const LocaleSwitcher = ({ className }: { className?: string }) => {
         )}
         onClick={async () => {
           router.push(pathname, { locale: "en" })
-          // router.refresh()
+          router.refresh()
         }}
       >
         <span className="relative z-10">EN</span>

@@ -1,7 +1,8 @@
 "use server"
 
 import { AuthError } from "next-auth"
-import { signIn } from "@/server/auth"
+import { getTranslations } from "next-intl/server"
+import { signIn, signOut } from "@/server/auth"
 import { credentialsSchema } from "@/types/auth.schema"
 import { actionClient } from "./safe-action"
 
@@ -38,3 +39,14 @@ export const loginUser = actionClient
       throw error
     }
   })
+
+export const logoutUser = actionClient.action(async () => {
+  const t = await getTranslations()
+  try {
+    await signOut({ redirect: false })
+    return { success: t("Server.actions.success-logout") }
+  } catch (error) {
+    console.log(error)
+    return { error: t("Server.actions.error") }
+  }
+})
