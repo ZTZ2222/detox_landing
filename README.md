@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This Next.js application is a fully featured CMS built on top of Prisma and NextAuth.js, featuring features such as authentication, user management, and content management. The application uses a wide variety of UI components, including an accordion, alert dialogs, avatars, badges, breadcrumb navigation, buttons, carousels, charts, checkboxes, collapsibles, commands, context menus, drawers, dropdown menus, forms, hover cards, input fields, labels, login forms, logout buttons, menubars, navigation menus, paginations, popovers, progress bars, radio groups, resizable panels, scroll areas, searches, selects, separators, sheets, sidebars, skeletons, sliders, spinners, subheadings, tabs, textareas, toasts, toaster, toggle groups, toggles, tooltips, and upload components. The application includes a powerful CMS for managing content such as sections, cards, and social links. It features a robust request management system for handling client inquiries. The application is designed to be highly customizable with a variety of settings, including user roles, authentication, and general settings. 
 
-## Getting Started
+## Inputs
 
-First, run the development server:
+* The application requires a PostgreSQL database to function. 
+* The following environment variables are required: 
+    * `DATABASE_URL`: Connection string to your PostgreSQL database. 
+    * `AUTH_SECRET`: Secret for signing JWTs. 
+    * `AUTH_TRUST_HOST`: Trust host for NextAuth.js. 
+    * `ADMIN_EMAIL`: Email of the administrator user. 
+    * `ADMIN_PASSWORD`: Password of the administrator user. 
+    * `UPLOADTHING_SECRET`: Uploadthing secret key. 
+    * `UPLOADTHING_APP_ID`: Uploadthing app ID. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Outputs
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* The application produces a fully functional website with a robust CMS and request management system.
