@@ -171,11 +171,32 @@ function toast({ ...props }: Toast) {
   }
 }
 
+/**
+ * Custom React hook for managing toast notifications.
+ * @returns {Object} An object containing the current toast state, toast function, and dismiss function.
+ * @property {Object} state - The current state of toast notifications.
+ * @property {Function} toast - Function to create and display a new toast notification.
+ * @property {Function} dismiss - Function to dismiss a specific toast or all toasts if no ID is provided.
+ * @property {string} [dismiss.toastId] - Optional ID of the toast to dismiss.
+ */
 function useToast() {
   const [state, setState] = React.useState<State>(memoryState)
 
+  ```
+  /**
+   * Sets up a listener for state changes and cleans up on unmount.
+   * @param {Function} setState - The state setter function to be added as a listener.
+   * @param {Array} listeners - The array of listener functions.
+   * @param {any} state - The current state value.
+   * @returns {Function} Cleanup function to remove the listener when the component unmounts.
+   */
+  ```
   React.useEffect(() => {
     listeners.push(setState)
+    /**
+     * Creates and returns a cleanup function to remove a specific setState listener from an array of listeners.
+     * @returns {Function} A function that, when called, removes the setState listener from the listeners array.
+     */
     return () => {
       const index = listeners.indexOf(setState)
       if (index > -1) {
@@ -183,6 +204,11 @@ function useToast() {
       }
     }
   }, [state])
+/**
+ * Dismisses a toast notification
+ * @param {string} [toastId] - The unique identifier of the toast to dismiss. If not provided, it may dismiss the most recent or all toasts depending on implementation.
+ * @returns {void} This function doesn't return a value
+ */
 
   return {
     ...state,
