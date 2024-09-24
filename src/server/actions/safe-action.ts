@@ -5,6 +5,11 @@ import {
 
 export class ActionError extends Error {}
 
+/**
+ * Handles errors returned from the server
+ * @param {Error} e - The error object returned from the server
+ * @returns {string} The error message to be displayed to the user
+ */
 const handleReturnedServerError = (e: Error) => {
   // If the error is an instance of `ActionError`, unmask the message.
   if (e instanceof ActionError) {
