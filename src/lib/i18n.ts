@@ -21,6 +21,16 @@ export const AppConfig = {
   localePrefix,
 }
 
+/**
+ * Returns an array of all locale IDs defined in the application configuration.
+ /**
+  * Configures and returns the internationalization request configuration for the application.
+  * @param {Object} options - The options object.
+  * @param {string} options.locale - The locale string to be used for internationalization.
+  * @returns {Object} An object containing messages, error handling, and fallback configuration for internationalization.
+  */
+ * @returns {string[]} An array containing the IDs of all available locales.
+ */
 export const AllLocales = AppConfig.locales.map(locale => locale.id)
 
 export default getRequestConfig(async ({ locale }) => {
@@ -42,6 +52,12 @@ export default getRequestConfig(async ({ locale }) => {
   }
 })
 
+/**
+ * Generates the internationalized path for a given URL and locale
+ * @param {string} url - The original URL path
+ * @param {string} locale - The locale code to be used for internationalization
+ * @returns {string} The internationalized URL path
+ */
 export const getI18nPath = (url: string, locale: string) => {
   if (locale === AppConfig.defaultLocale) {
     return url

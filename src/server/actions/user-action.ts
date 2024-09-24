@@ -12,6 +12,15 @@ import { actionClient } from "./safe-action"
 
 export const createUser = actionClient
   .schema(userCreateSchema)
+  /**
+   * Creates a new user with the provided information
+   * @param {Object} parsedInput - The parsed input containing user details
+   * @param {string} parsedInput.email - The user's email address
+   * @param {string} parsedInput.password - The user's password
+   * @param {string} parsedInput.confirmPassword - The password confirmation
+   * @param {Object} parsedInput.rest - Additional user properties
+   * @returns {Promise<Object>} An object with either an error message or a success message
+   */
   .action(async ({ parsedInput }) => {
     const { email, password, confirmPassword, ...rest } = parsedInput
     const normalizedEmail = email.toLowerCase()
@@ -38,6 +47,12 @@ export const createUser = actionClient
 
 export const deleteUser = actionClient
   .schema(z.object({ id: z.string() }))
+  /**
+   * Asynchronous action to delete a user from the database
+   * @param {Object} parsedInput - The parsed input containing user information
+   * @param {string|number} parsedInput.id - The ID of the user to be deleted
+   * @returns {Promise<Object>} An object containing either a success message or an error message
+   */
   .action(async ({ parsedInput }) => {
     const t = await getTranslations()
     try {

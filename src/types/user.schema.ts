@@ -18,6 +18,13 @@ const userBaseSchema = z.object({
 })
 
 export const userCreateSchema = userBaseSchema.refine(
+  /**
+   * Validates if the provided password matches the confirmation password
+   * @param {Object} param0 - An object containing password and confirmPassword
+   * @param {string} param0.password - The original password entered by the user
+   * @param {string} param0.confirmPassword - The confirmation password entered by the user
+   * @returns {boolean} Returns true if passwords match, false otherwise
+   */
   ({ password, confirmPassword }) => password === confirmPassword,
   passwordMatchRefinement,
 )
@@ -35,6 +42,13 @@ export const userChangePasswordSchema = z
       .min(1, { message: "Пароль не может быть пустым" }),
   })
   .refine(
+    /**
+     * Validates if the password and confirmation password match
+     * @param {Object} obj - The object containing password and confirmPassword
+     * @param {string} obj.password - The original password
+     * @param {string} obj.confirmPassword - The confirmation password
+     * @returns {boolean} True if passwords match, false otherwise
+     */
     ({ password, confirmPassword }) => password === confirmPassword,
     passwordMatchRefinement,
   )
