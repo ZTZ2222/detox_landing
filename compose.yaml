@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  detox:
+    image: tilzam/detox:latest
+    container_name: detox_container
+    ports:
+      - "3008:3000"  # Map port 3008 on the host to port 3000 in the container
+    restart: always  # Always restart the container if it stops
+    depends_on:
+      - posql
+    entrypoint: ["sh", "/app/entrypoint.sh"]
+
+  posql:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      - POSTGRES_USER=postgres_detox
+      - POSTGRES_PASSWORD=postgres_detox
+      - POSTGRES_DB=detox
+    expose:
+      - 5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: always  # Always restart the container if it stops
+
+networks:
+  default:
+    driver: bridge
