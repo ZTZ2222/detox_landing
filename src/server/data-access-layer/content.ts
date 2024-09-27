@@ -10,11 +10,6 @@ import type {
   zSocial,
 } from "@/types/content.schema"
 
-/**
- * Retrieves a section by its unique identifier from the database.
- * @param {number} uid - The unique identifier of the section to retrieve.
- * @returns {Promise<zSection | null>} A promise that resolves to the section data including its cards, or null if not found.
- */
 export async function getSectionById(uid: number): Promise<zSection | null> {
   const sectionData = await db.section.findUnique({
     where: { uid },
@@ -27,11 +22,6 @@ export async function getSectionById(uid: number): Promise<zSection | null> {
   return sectionData
 }
 
-/**
- * Retrieves and normalizes a section by its slug identifier.
- * @param {string} slug - The unique slug identifier for the section.
- * @returns {Promise<NormalizedSection | null>} A promise that resolves to a normalized section object if found, or null if not found.
- */
 export async function getNormalizedSectionById(
   slug: string,
 ): Promise<NormalizedSection | null> {
@@ -55,12 +45,6 @@ export async function getNormalizedSectionById(
   const heading = sectionData[
     `heading_${locale}` as keyof typeof sectionData
   ] as string | null
-  /**
-   * Normalizes an array of cards based on the provided locale.
-   * @param {Object[]} sectionData.cards - The array of card objects to be normalized.
-   * @param {string} locale - The locale used for selecting language-specific fields.
-   * @returns {NormalizedCard[]} An array of normalized card objects with localized content.
-   */
   const subheading = sectionData[
     `subheading_${locale}` as keyof typeof sectionData
   ] as string | null
@@ -90,10 +74,6 @@ export async function getNormalizedSectionById(
     subheading,
     primaryButton,
     secondaryButton,
-    /**
-     * Retrieves all social entries from the database in ascending order of their unique identifiers.
-     * @returns {Promise<zSocial[] | null>} A promise that resolves to an array of zSocial objects if found, or null if no entries are found or an error occurs.
-     */
     image: sectionData.image,
     cards: normalizedCards,
   }
@@ -111,10 +91,6 @@ export async function getSocials(): Promise<zSocial[] | null> {
   }
 }
 
-/**
- * Retrieves metadata from the database
- * @returns {Promise<zMetaRead | null>} A promise that resolves to the metadata object if found, or null if not found or if an error occurs
- */
 export async function getMetadata(): Promise<zMetaRead | null> {
   try {
     const metadata = await db.metaData.findFirst({})
